@@ -1,0 +1,24 @@
+!!!
+%html
+  %head
+    %meta{ charset:"utf-8"}
+    %meta{ name:"viewport", content:"width=device-width, initial-scale=1"}
+    %meta{name:"description", content:"Lamap Bootstrap 3 App Landing Page"}
+    %meta{name:"author", content:"Daniel Bearl"}
+
+    %link{rel: "shortcut icon", href: "assets/favicon.ico"}
+
+    %title Swimshorts
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+    %link{href: 'http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700', rel: 'stylesheet', type: 'text/css'}
+    
+  %body
+
+    -[:notice, :error, :alert].each do |level|
+      - unless flash[level].blank?
+        %div{class: "alert alert-#{flash_class(level)}"}
+          %a{ href: "#", class: "close", data: { dismiss: "alert" } } &times;
+          = flash[level]
+    = yield

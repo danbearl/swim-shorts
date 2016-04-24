@@ -1,0 +1,31 @@
+%p
+  %b Title:
+  = @submission.title
+%p
+  %b Link:
+  = @submission.link
+%p
+  %b Password:
+  = @submission.password
+%p
+  %b Description:
+  = @submission.description
+%p
+  %b Name:
+  = @submission.name
+%p
+  %b Team name:
+  = @submission.team_name
+%p
+  %b Email:
+  = @submission.email
+%p
+  %b Genre:
+  = @submission.genre
+%p
+  %b Runtime:
+  = @submission.runtime
+
+= link_to 'Edit', edit_submission_path(@submission)
+\|
+= link_to 'Back', submissions_path

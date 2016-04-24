@@ -1,0 +1,37 @@
+%h1 Listing submissions
+
+%table
+  %thead
+    %tr
+      %th Title
+      %th Link
+      %th Password
+      %th Description
+      %th Name
+      %th Team name
+      %th Email
+      %th Genre
+      %th Runtime
+      %th
+      %th
+      %th
+
+  %tbody
+    - @submissions.each do |submission|
+      %tr
+        %td= submission.title
+        %td= submission.link
+        %td= submission.password
+        %td= submission.description
+        %td= submission.name
+        %td= submission.team_name
+        %td= submission.email
+        %td= submission.genre
+        %td= submission.runtime
+        %td= link_to 'Show', submission
+        %td= link_to 'Edit', edit_submission_path(submission)
+        %td= link_to 'Destroy', submission, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Submission', new_submission_path

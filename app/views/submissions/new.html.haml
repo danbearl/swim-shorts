@@ -1,0 +1,142 @@
+-if current_user
+  =link_to "Review Submissions", submissions_path
+
+.preloader
+  .preloader-content-wrapper
+    .preloader-content
+      %i.fa.fa-cog.fa-3x.fa-spin
+      
+%nav.navbar.navbar-default.navbar-fixed-top{role: "navigation"}
+  .container
+    .navbar-header
+      %button.navbar-toggle{type: "button", data: {toggle: "collapse", target: ".navbar-collapse"}}
+        %span.sr-only Toggle navigation
+        %span Menu
+
+      %a.navbar-brand{href: "#intro"}
+        %img{src: "assets/footer_logo.png", alt: "logo small"}
+	
+    .navbar-collapse.collapse
+      %ul.nav.navbar-nav.pull-right
+        %li
+          %a{href: "#intro"} Start
+        %li
+          %a{href: "#about"} About
+        %li
+          %a{href: "#terms"} Terms and Conditions
+        %li
+          %a{href: "#submit"} Submit Film
+
+%section.intro#intro
+  .container
+    .row
+      .col-md-12
+        .intro-section
+          -# begin logo intro section
+          -#%img{src: "assets/lamap_logo.png", alt: "logo"}
+          -# end logo intro section
+          %h1 Swim Shorts Film Festival
+          %ul.list-inline
+            %li
+              %a.btn.btn-custom{href: "#"}
+                %i.fa.fa-film
+                Submit
+            %li
+              %a{href: "#", class:"btn btn-custom-border"}
+                %i.fa.fa-align-left
+                About
+          %a{href:"#", class:"mouse"}
+            %i.fa.fa-angle-down.Drop.animated
+  %span.mouse
+
+%section.about#about
+  .container
+    .row
+      .col-md-6.col-sm-12
+        .brief-content.wow.fadeInLeft.animated{data: {"wow-offset" => "10"}}
+          %h1 About Swim Shorts Film Festival
+          .underline
+          %p The Swim Shorts Film Festival seeks to celebrate our Northeast Florida's waterways through short film submissions. We invite filmmakers of all ages and ability levels to send us a short film about or set in Northeast Florida's waters. All proceeds from the festival will go to the St. John's Riverkeeper organization.
+      .col-md-6.col-sm-12
+        %figure.small-slider.wow.fadeInRight.animated{data: {"wow-offset" => "10"}}
+          -# begin single slider item
+          .item
+            %img{ src: "assets/iphone5_two.png", alt: "iphone5"}
+          -# end single slider item
+          -# begin single slider item
+          .item
+            %img{ src: "assets/iphone6.png", alt: "iphone5"}
+          -# end single slider item
+%section.terms#terms
+  .container
+    .row
+      .col-md-12
+        .section-head.wow.fadeInLeft.animated{data: {"wow-offset" => "10"}}
+          %h1 Terms and Conditions
+          %span.underline
+    .row
+      .col-md-12
+        .wow.fadeInLeft.animated{data: {"wow-offset" => "10"}}
+          %p
+            The Swim Shorts Film Festival accepts submissions from all interested participants with the following terms and conditions:
+          %ol
+            %li Limit one entry per team
+            %li Total runtime of the film must not exceed 30 minutes
+            %li Northeast Florida's waterways must be the central element of the film, i.e. the films main subject or setting
+            %li All elements of the film must be the intellectual property of the submitter, and may not contain any elements that infringe on another person or organization's copy rights
+            %li Films must be submitted as a private, password protected video on Vimeo.com
+            %li Submitters retain ownership of their videos, but agree to allow Swim Shorts Film Festival to show them before an audience during the festival
+            %li Swim Shorts Film Festival will not accept submissions from organizers of the festival, employees or volunteers for Sun Ray Cinemas or St. John's Riverkeeper, festival judges, or immediate family memebers of anyone within the aforementioned groups
+
+%section.submit#submit
+  .container
+    .row
+      .col-md-12
+        .section-head.wow.fadeInDown.animated{data: {"wow-offset"=>"10"}}
+          %h1 Submit Your Film
+          %p Fill out this form to submit your film
+          %span.underline
+    .row
+      .col-md-12
+        = render 'form'
+
+%footer.footer#footer
+  .container
+    .row.wow.fadeIn.animated{data: {"wow-offset"=>"10", "wow-duration"=>"1.5s"}}
+      .col-md-3.col-sm-3
+        %img{src: "assets/footer_logo.png", alt:"footer logo"}
+        %p
+          %small Copyright &copy; 2016 Swim Shorts Film Festival
+
+      .col-md-2.col-md-offset-1.col-sm-3
+        %h4 Links
+        .underline-small
+        %ul
+          %li
+            %a{href:"#about"} About us
+      .col-md-2.col-md-offset-1.col-sm-3
+        %h4 Contact Us
+        .underline-small
+        %ul
+          %li
+            %a{href: "mailto:submissions@swimshortsfilmfest.com"} submissions@swimshortsfilmfest.com
+
+      .col-md-2.col-md-offset-1.col-sm-3
+        %h4 Get Social
+        .underline-small
+        %ul.list-inline
+          %li
+            %a{href: "#"}
+              %i.fa.fa-facebook
+          %li
+            %a{href: "#"}
+              %i.fa.fa-twitter
+          %li
+            %a{href: "#"}
+              %i.fa.fa-instagram
+          %li
+            %a{href: "#"}
+              %i.fa.fa-vimeo-square
+          %li
+            %a{href: "#"}
+              %i.fa.fa-youtube
