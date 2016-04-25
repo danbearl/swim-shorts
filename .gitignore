@@ -15,3 +15,4 @@
 /log/*
 !/log/.keep
 /tmp
+/v1.4.3/*
