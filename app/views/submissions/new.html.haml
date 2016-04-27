@@ -26,6 +26,8 @@
           %a{href: "#terms"} Terms and Conditions
         %li
           %a{href: "#submit"} Submit Film
+        %li
+          %a{href: "#sponsors"} Sponsors
 
 %section.intro#intro
   .container
@@ -101,6 +103,19 @@
     .row
       .col-md-12
         = render 'form'
+
+%section.customers.wow.fadeIn.animated#sponsors
+  .container
+    .row
+      .col-md-12
+        .section-head.wow.fadeInRight.animated{data: {"wow-offset"=>"10"}}
+          %h1 Sponsors
+          %span.underline
+    .row
+      .col-md-12
+        .customer-slider
+          .item
+            %img{ src: "assets/RiverkeeperLogo.jpg", alt: "client logo"}
 
 %footer.footer#footer
   .container
