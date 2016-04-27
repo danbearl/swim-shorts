@@ -37,38 +37,35 @@
           -# begin logo intro section
           -#%img{src: "assets/lamap_logo.png", alt: "logo"}
           -# end logo intro section
-          %h1 Swim Shorts Film Festival
-          %ul.list-inline
-            %li
-              %a.btn.btn-custom{href: "#"}
-                %i.fa.fa-film
-                Submit
-            %li
-              %a{href: "#", class:"btn btn-custom-border"}
-                %i.fa.fa-align-left
-                About
-          %a{href:"#", class:"mouse"}
+          -#%h1 Swim Shorts Film Festival
+          .intro-buttons
+            %ul.list-inline
+              %li
+                %a.btn.btn-custom{href: "#"}
+                  %i.fa.fa-film
+                  Submit
+              %li
+                %a.btn.btn-custom-border{href: "#"}
+                  %i.fa.fa-align-left
+                  About
+          -#%a{href:"#", class:"mouse"}
             %i.fa.fa-angle-down.Drop.animated
   %span.mouse
 
 %section.about#about
   .container
     .row
-      .col-md-6.col-sm-12
-        .brief-content.wow.fadeInLeft.animated{data: {"wow-offset" => "10"}}
-          %h1 About Swim Shorts Film Festival
+      .col-md-12
+        .section-head.wow.fadeInRight.animated{data: {"wow-offset" => "10"}}
+          %h1 Swim Shorts Film Festival
           .underline
-          %p The Swim Shorts Film Festival seeks to celebrate our Northeast Florida's waterways through short film submissions. We invite filmmakers of all ages and ability levels to send us a short film about or set in Northeast Florida's waters. All proceeds from the festival will go to the St. John's Riverkeeper organization.
-      .col-md-6.col-sm-12
-        %figure.small-slider.wow.fadeInRight.animated{data: {"wow-offset" => "10"}}
-          -# begin single slider item
-          .item
-            %img{ src: "assets/St_Johns_River.jpg", alt: "river"}
-          -# end single slider item
-          -# begin single slider item
-          .item
-            %img{ src: "assets/St_Johns_River_Houseboat.jpg", alt: "river"}
-          -# end single slider item
+    .row
+      .col-md-12
+        .wow.fadeInRight.animated{data: {"wow-offset" => "10"}}
+          %p The Swim Shorts Film Festival seeks to celebrate our Northeast Florida's waterways through short film submissions. We invite filmmakers of all ages and ability levels to send us a short film about or set in Northeast Florida's waters. All proceeds from the festival, including ticket sales and dontaions, will go to the St. John's Riverkeeper organization for use in their public awareness and conservation efforts. There is no entry fee for submissions to the festival.
+
+          %p A panel of volunteer judges will select the best entries from each age group, and we will screen the winners at the festival showcase at Sun Ray Cinemas on August 18, 2016. Additionally, creators of the top entries will receive prizes donated from local businesses.
+
 %section.terms#terms
   .container
     .row
@@ -83,14 +80,20 @@
             The Swim Shorts Film Festival accepts submissions from all interested participants with the following terms and conditions:
           %ol
             %li Limit one entry per team
-            %li Total runtime of the film must not exceed 5 minutes
-            %li Northeast Florida's waterways must be the central element of the film, i.e. the films main subject or setting
+            %li Total runtime of the film must not exceed 5 minutes and must be at least 720p resolution
+            %li Teams must enter into one of the following age groups: Elementary School, Middle School, High School, College, and Professional. At least one member of the submission's team must be in the selected age group.
+            %li Submissions must be about a Northeast Florida waterway or a favorite water activity such as swimming, boating, fishing, surfing, snorkeling, scuba diving, tubing, paddle boarding, et cetera.
             %li All elements of the film must be the intellectual property of the submitter, and may not contain any elements that infringe on another person or organization's copy rights
             %li 
               Films must be submitted as a private, password protected video on 
               %a{href: 'http://www.vimeo.com'} Vimeo.com
-            %li Submitters retain ownership of their videos, but agree to allow Swim Shorts Film Festival to show them before an audience during the festival
+            %li All entries must be submitted by July 15, 2016, to be considered by the judges. We will announce the winning films on August 1, 2016.
+            %li Submitters retain ownership of their videos, but agree to allow Swim Shorts Film Festival to show them before an audience during the festival showcase at Sun Ray Cinemas on August 18, 2016.
             %li Swim Shorts Film Festival will not accept submissions from organizers of the festival, employees or volunteers for Sun Ray Cinemas or St. John's Riverkeeper, festival judges, or immediate family memebers of anyone within the aforementioned groups
+
+          %p
+            %strong Advisory:
+            Many water activities can be dangerous. Do not engage in activities that are beyond your skill or comfort level. Swim Shorts Film Festival is not liable for injury to persons or damage to property that occurs during the creation of your film.
 
 %section.submit#submit
   .container
