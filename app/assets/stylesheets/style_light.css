@@ -361,6 +361,7 @@ section.intro {
     background-attachment: fixed;
     -webkit-background-size: cover;
             background-size: cover;
+    background-position: center;
 }
 
     .intro .intro-section {
