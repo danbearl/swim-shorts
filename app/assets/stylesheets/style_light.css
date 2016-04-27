@@ -357,7 +357,7 @@ section.intro {
 /* Intro Section */
 
 .intro {
-    background-image: url(../assets/introslider/slide1.jpg);
+    background: url(../assets/introslider/slide1.jpg);
     background-attachment: fixed;
     -mox-background-size: cover;
     -o-background-size: cover;
