@@ -21,4 +21,9 @@
         %div{class: "alert alert-#{flash_class(level)}"}
           %a{ href: "#", class: "close", data: { dismiss: "alert" } } &times;
           = flash[level]
+
+    -if current_user
+      =link_to "Review Submissions", submissions_path
+      |
+      = link_to "Log Out", log_out_path
     = yield
