@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160423135554) do
+ActiveRecord::Schema.define(version: 20160425201600) do
 
   create_table "authem_sessions", force: :cascade do |t|
     t.string   "role",                    null: false
@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(version: 20160423135554) do
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
     t.boolean  "accept_terms"
+    t.string   "group"
   end
 
   create_table "users", force: :cascade do |t|
