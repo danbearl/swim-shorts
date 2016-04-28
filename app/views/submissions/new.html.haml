@@ -27,6 +27,8 @@
         %li
           %a{href: "#submit"} Submit Film
         %li
+          %a{href: "#faq"} FAQ
+        %li
           %a{href: "#sponsors"} Sponsors
 
 %section.intro#intro
@@ -126,13 +128,13 @@
       .col-xs-12.col-md-12
         .wow.fadeInLeft.animated{data: {"wow-offset" => "10"}}
           %h4 Finalists will be decided on by August 1st. 
+          %p A volunteer panel of judges will review the submissions and select finalists on August 1st. Judges will be from multiple fields and backgrounds and will use a predetermined rubric as a guide.
           %p The Video Showcase will be held on August 18th at Sun Ray Cinema beginning at 6:30pm. 
           %p 
             All ticket sales of the showcase will be donated to the St. John’s Riverkeeper to aid in their efforts to keep our river clean and healthy. If you would like to sponsor this event, please contact the administrator at
             %a{href: "mailto:submissions@swimshortsfilmfest.com"}submissions@swimshortsfilmfest.com.
             All sponsorship donations will be awarded to the St. John’s Riverkeeper as well. 
           %p Submissions will be judged on creativity, writing, filming, acting, sound, and editing among other things. Show us something fun, interesting, and perhaps even educational! 
-          %p Judges will be from multiple fields and backgrounds and will use a predetermined rubric as a guide.
 
 %section.terms#terms
   .container
@@ -175,6 +177,38 @@
       .col-xs-12.col-md-12
         = render 'form'
 
+%section.faq#faq
+  .container
+    .row
+      .col-xs-12.col-md-12
+        .section-head.wow.fadeIn.animated{data: {"wow-offset" => "10"}}
+          %h1 Frequently Asked Questions
+          %span.underline
+    .row
+      .col-xs-12.col-md-12
+        .wow.fadeIn.animated{data: {"wow-offset" => "10"}}
+          .section-head
+            %h4 Why does this festival exist?
+          %p We love the Florida springs. We love Floridian beaches. We love the St. Johns, Black Creek, and Little Pottsburg. We know we're not the only people who love these blue, green, and coffee colored jewels. By highlighting their value and spreading awareness about issues that threaten them, we can help protect these treasured places. The more people that know and care about our waterways, the safer these places will be for us and for future generations to enjoy.
+          %br
+    .row
+      .col-xs-12.col-md-12
+        .wow.fadeIn.animated{data: {"wow-offset" => "10"}}
+          .section-head
+            %h4 What can my film be about?
+          %p Documentary, fake documentary, sports video, action film, thriller, science fiction, creature feature, horror, drama, love story, spy movie, think outside of the box! 
+
+          %p Do you enjoy sports? How about swimming, boating, fishing, surfing, paddle boarding, kayaking, scuba diving, snorkeling, paddle board yoga, body surfing, tubing, you name it! 
+          %br
+
+    .row
+      .col-xs-12.col-md-12
+        .wow.fadeIn.animated{data: {"wow-offset" => "10"}}
+          .section-head
+            %h4 What if I don't have any fancy film equipment?
+          %p You don’t necessarily need fancy equipment to make a video these days (although it can help). Most smartphones will take very high quality video. And there are a number of free video editing apps for your phone or computer as well! 
+          %br
+
 %section.customers.wow.fadeIn.animated#sponsors
   .container
     .row
@@ -187,7 +221,6 @@
         .customer-slider
           .item
             %img{ src: "assets/RiverkeeperLogo.jpg", alt: "client logo"}
-
 %footer.footer#footer
   .container
     .row.wow.fadeIn.animated{data: {"wow-offset"=>"10", "wow-duration"=>"1.5s"}}
