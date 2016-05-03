@@ -67,12 +67,20 @@ When /^I fill in the following:?/ do |form|
   end
 end
 
+When /^I select "(.*?)" from "(.*?)"$/ do |option, field|
+  select option, from: field
+end
+
 When /^I press "(.*?)"$/ do |action|
   click_button action
 end
 
 When /^I accept the confirmation$/ do
   page.driver.browser.switch_to.alert.accept
+end
+
+When /^I check "(.*?)"$/ do |check_box|
+  check check_box
 end
 
 Then /^I should see "(.*?)"$/ do |text|

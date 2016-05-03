@@ -2,7 +2,7 @@ Feature: Submissions
 
   Scenario: An anonymous user can submit a video
     Given I am on the home page
-    And I fill in the following:
+    When I fill in the following:
       | submission_title       | a video                          |
       | submission_link        | http://test.com                  |
       | submission_password    | pass                             |
@@ -12,6 +12,8 @@ Feature: Submissions
       | submission_email       | dan@example.com                  |
       | submission_genre       | Horror                           |
       | submission_runtime     | 12:32                            |
+    And I select "Professional" from "submission_group"
+    And I check "submission_accept_terms"
     And I press "Submit Film"
     Then I should see "Thank you for your submission."
 
@@ -22,9 +24,9 @@ Feature: Submissions
       | password_confirmation | pass           |
     And that user is logged in
     And the following submissions:
-      | title      | link         | password | description | name | team_name  | email           | genre  | runtime |
-      | sunshine   | https://test | pass     | a video     | Dan  | Crocodiles | dan@example.com | Horror | 5:32    |
-      | springtime | https://test | pass     | a video     | Bob  | Aligators  | bob@example.com | Comedy | 12:66   |
+      | title      | link         | password | description | name | team_name  | email           | genre  | runtime | group        |
+      | sunshine   | https://test | pass     | a video     | Dan  | Crocodiles | dan@example.com | Horror | 5:32    | Professional |
+      | springtime | https://test | pass     | a video     | Bob  | Aligators  | bob@example.com | Comedy | 12:66   | Professional |
     And I am on the home page
     When I follow "Review Submissions"
     Then I should see "sunshine"

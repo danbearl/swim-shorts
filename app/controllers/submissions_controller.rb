@@ -25,7 +25,7 @@ class SubmissionsController < ApplicationController
     @submission = Submission.new(submission_params)
 
     if @submission.save
-      redirect_to submissions_path, notice: 'Thank you for your submission.'
+      redirect_to root_path, notice: 'Thank you for your submission.'
     else
       render :new
     end
@@ -54,6 +54,6 @@ class SubmissionsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def submission_params
-      params.require(:submission).permit(:title, :link, :password, :description, :name, :team_name, :email, :genre, :runtime)
+      params.require(:submission).permit(:title, :link, :password, :description, :name, :team_name, :email, :genre, :runtime, :group, :accept_terms)
     end
 end
