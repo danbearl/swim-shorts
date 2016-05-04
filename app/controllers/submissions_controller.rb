@@ -25,7 +25,7 @@ class SubmissionsController < ApplicationController
     @submission = Submission.new(submission_params)
 
     if @submission.save
-      redirect_to root_path, notice: 'Thank you for your submission.'
+      redirect_to root_path, flash: { success: 'Thank you for your submission.' }
     else
       render :new
     end

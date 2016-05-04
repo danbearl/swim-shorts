@@ -16,11 +16,18 @@
     
   %body
 
-    -[:notice, :error, :alert].each do |level|
+    -[:success, :notice, :error, :alert].each do |level|
       - unless flash[level].blank?
         %div{class: "alert alert-#{flash_class(level)}"}
           %a{ href: "#", class: "close", data: { dismiss: "alert" } } &times;
           = flash[level]
+    -if @submission and @submission.errors.any?
+      .alert.alert-danger
+        %a{ href: "#", class: "close", data: { dismiss: "alert" } } &times;
+        %p= "#{pluralize(@submission.errors.count, "error")} prohibited this submission from being saved:"
+        %ul
+          - @submission.errors.full_messages.each do |msg|
+            %li= msg
 
     -if current_user
       =link_to "Review Submissions", submissions_path
