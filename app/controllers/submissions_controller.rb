@@ -1,6 +1,8 @@
 class SubmissionsController < ApplicationController
   before_filter :require_user, except: [:new, :create]
   before_action :set_submission, only: [:show, :edit, :update, :destroy]
+  expose(:submissions)
+  expose(:submission)
 
   # GET /submissions
   def index
@@ -44,6 +46,10 @@ class SubmissionsController < ApplicationController
   def destroy
     @submission.destroy
     redirect_to submissions_url, notice: 'Submission was successfully destroyed.'
+  end
+
+  def rubric
+    send_data submission.rubric, filename: "#{submission.title}_rubric.txt"
   end
 
   private
