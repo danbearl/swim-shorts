@@ -10,6 +10,7 @@ gem 'newrelic_rpm'
 gem 'pg'
 gem 'rails', '4.2.5.1'
 gem 'rdiscount'
+gem 'therubyracer'
 gem 'turbolinks'
 
 group :assets do

@@ -5,7 +5,6 @@ Feature: Submissions
     When I fill in the following:
       | submission_title       | a video                          |
       | submission_link        | http://test.com                  |
-      | submission_password    | pass                             |
       | submission_description | A video about water or something |
       | submission_name        | Dan                              |
       | submission_team_name   | Dan's Awesome Team               |

@@ -1,10 +1,9 @@
 class Submission < ActiveRecord::Base
-  validates :title, :link, :password, :description, :name, :team_name, :email, :genre, :runtime, :group, presence: true
+  validates :title, :link, :description, :name, :team_name, :email, :genre, :runtime, :group, presence: true
   validates :acept_terms, acceptance: true
 
   def rubric
     "Link: #{self.link}\n"\
-    "Password: #{self.password}\n\n"\
     "Age Group: #{self.group}\n\n"\
     "Video Title: #{self.title}\n"\
     "Team Name: #{self.team_name}\n\n"\
