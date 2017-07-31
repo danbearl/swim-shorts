@@ -11,6 +11,7 @@
       %th Team name
       %th Email
       %th Genre
+      %th Group
       %th Runtime
       %th
       %th
@@ -28,6 +29,7 @@
         %td= submission.team_name
         %td= submission.email
         %td= submission.genre
+        %td= submission.group
         %td= submission.runtime
         %td= link_to 'Show', submission
         %td= link_to 'Edit', edit_submission_path(submission)
